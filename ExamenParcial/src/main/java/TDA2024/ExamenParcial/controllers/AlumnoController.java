@@ -65,7 +65,7 @@ public class AlumnoController {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             AlumnoModel nuevoAlumno = alumnoService.add(model);
-            logger.info("Alumno creado con éxito: {}", nuevoAlumno);
+            logger.info("Alumno creado con éxito: {}", nuevoAlumno.nombre);
             return new ResponseEntity<>(nuevoAlumno, HttpStatus.CREATED);
         } catch (Exception e) {
             logger.error("Error al crear el alumno: {}", e.getMessage());
@@ -74,19 +74,19 @@ public class AlumnoController {
     }
 
     @PutMapping(ruta.UPDATE)
-    public ResponseEntity<AlumnoModel> update(@PathVariable int id, @RequestBody AlumnoModel model) {
+    public ResponseEntity<AlumnoModel> update( @RequestBody AlumnoModel model) {
         try {
-            AlumnoModel existingAlumno = alumnoService.findById(id);
+            AlumnoModel existingAlumno = alumnoService.findById(model.id);
             if (existingAlumno == null) {
-                logger.warn("Alumno con ID {} no encontrado para actualización", id);
+                logger.warn("Alumno con ID {} no encontrado para actualización", model.id);
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
             AlumnoModel updatedAlumno = alumnoService.update(model);
-            logger.info("Alumno con ID {} actualizado correctamente", id);
+            logger.info("Alumno con ID {} actualizado correctamente", model.id);
             return new ResponseEntity<>(updatedAlumno, HttpStatus.OK);
         } catch (Exception e) {
-            logger.error("Error al actualizar el alumno con ID {}: {}", id, e.getMessage());
+            logger.error("Error al actualizar el alumno con ID {}: {}", model.id, e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

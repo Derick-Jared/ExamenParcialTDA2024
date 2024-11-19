@@ -1,0 +1,16 @@
+2024-11-19T11:15:26.703-05:00  INFO 28248 --- [ExamenParcial] [main] T.E.ExamenParcialApplication             : Starting ExamenParcialApplication using Java 17.0.12 with PID 28248 (C:\Users\ASUS\Documents\UNU\CICLO VIII\TALLER DE DESARROLLO\RepositorioExamen\ExamenParcialTDA2024\ExamenParcial\target\classes started by ASUS in C:\Users\ASUS\Documents\UNU\CICLO VIII\TALLER DE DESARROLLO\RepositorioExamen\ExamenParcialTDA2024\ExamenParcial)
+2024-11-19T11:15:26.711-05:00  INFO 28248 --- [ExamenParcial] [main] T.E.ExamenParcialApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T11:15:28.108-05:00  INFO 28248 --- [ExamenParcial] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-19T11:15:28.109-05:00  INFO 28248 --- [ExamenParcial] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-19T11:15:28.185-05:00  INFO 28248 --- [ExamenParcial] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-19T11:15:28.322-05:00  INFO 28248 --- [ExamenParcial] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-19T11:15:28.715-05:00  INFO 28248 --- [ExamenParcial] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@188a5fc2
+2024-11-19T11:15:28.718-05:00  INFO 28248 --- [ExamenParcial] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-19T11:15:28.761-05:00  INFO 28248 --- [ExamenParcial] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-19T11:15:28.833-05:00  INFO 28248 --- [ExamenParcial] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-19T11:15:28.884-05:00  INFO 28248 --- [ExamenParcial] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-19T11:15:30.072-05:00  INFO 28248 --- [ExamenParcial] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-19T11:15:30.659-05:00  INFO 28248 --- [ExamenParcial] [main] T.E.ExamenParcialApplication             : Started ExamenParcialApplication in 4.417 seconds (process running for 4.877)
+2024-11-19T11:15:50.925-05:00  INFO 28248 --- [ExamenParcial] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-19T11:15:51.376-05:00  INFO 28248 --- [ExamenParcial] [http-nio-8081-exec-2] T.E.controllers.AlumnoController         : Solicitando lista de todos los alumnos
+2024-11-19T11:15:51.376-05:00 DEBUG 28248 --- [ExamenParcial] [http-nio-8081-exec-2] T.E.controllers.AlumnoController         : Número de alumnos encontrados: 2

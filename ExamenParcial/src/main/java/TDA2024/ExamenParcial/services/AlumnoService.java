@@ -25,18 +25,31 @@ public class AlumnoService implements IAlumnoService {
 
     @Override
     public AlumnoModel add(AlumnoModel model) {
-        return repository.save(model);
+        if(repository.findById(model.id).get()==null){
+            return repository.save(model);
+        }else{
+            return null;
+        }
     }
 
     @Override
     public AlumnoModel update(AlumnoModel model) {
-        return repository.save(model);
+        if(repository.findById(model.id).get()!=null){
+            return repository.save(model);
+        }else{
+            return null;
+        }
     }
 
     @Override
     public boolean delete(int id) {
-        repository.deleteById(id);
-        return true;
+        if(repository.findById(id).get()!=null) {
+            repository.deleteById(id);
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
     
